@@ -1,0 +1,21 @@
+/* Home Page */
+body {
+  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+}
+.collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-link {
+  color: white;
+  float: right;
+}
+.star-nav {
+  border-radius: 100%;
+  background-color: white;
+}
