@@ -7,15 +7,131 @@ body {
   min-height: 100vh;
   color: white;
 }
-.collapse {
-  display: flex;
-  justify-content: flex-end;
+
+.container-fluid {
+  padding: 0;
+}
+.navbar-nav {
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 70px;
+  margin-right: 0;
 }
 .nav-link {
   color: white;
   float: right;
+  margin-right: 20px;
+  font-family: "Inconsolata", monospace;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 2px;
 }
 .star-nav {
   border-radius: 100%;
   background-color: white;
+}
+.h3-home,
+.h1-home,
+.p-home {
+  margin: 10%;
+  text-align: center;
+}
+.h3-home {
+  font-family: "Inconsolata", monospace;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+.h1-home {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 80px;
+  letter-spacing: 15px;
+}
+.p-home {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  margin: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  letter-spacing: 0.5px;
+  color: (255, 255, 255, 0.7);
+  opacity: 0.7;
+}
+.button-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+  font-family: "Merriweather", serif;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+  }
+  .button-home {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+  }
+  .h3-home,
+  .h1-home,
+  .p-home {
+    margin: 1%;
+    text-align: left;
+  }
+  .row,
+  .button-home {
+    margin-top: 20%;
+  }
+  .h1-home {
+    margin-top: 5%;
+  }
+  .p-home {
+    margin-top: 5%;
+    padding-right: 30%;
+    padding-left: 0;
+  }
+  .button-home {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+    font-size: 36px;
+    font-family: "Merriweather", serif;
+  }
+  .collapse {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
