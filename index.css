@@ -1,5 +1,5 @@
 /* Home Page */
-body {
+.body-home {
   background-image: url("./assets/home/background-home-mobile.jpg");
   background-size: cover;
   background-position: center;
@@ -13,9 +13,10 @@ body {
 }
 .navbar-nav {
   backdrop-filter: blur(20px);
-  padding: 10px;
-  padding-left: 100px;
-  padding-right: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
   margin-right: 0;
 }
 .nav-link {
@@ -30,6 +31,7 @@ body {
 .star-nav {
   border-radius: 100%;
   background-color: white;
+  margin-left: 40px;
 }
 .h3-home,
 .h1-home,
@@ -79,7 +81,7 @@ body {
 }
 
 @media screen and (min-width: 400px) {
-  body {
+  .body-home {
     background-image: url("./assets/home/background-home-tablet.jpg");
     background-size: cover;
     background-position: center;
@@ -93,7 +95,7 @@ body {
 }
 
 @media screen and (min-width: 950px) {
-  body {
+  .body-home {
     background-image: url("./assets/home/background-home-desktop.jpg");
     background-size: cover;
     background-position: center;
@@ -133,5 +135,74 @@ body {
   .collapse {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+/* Destination page */
+
+.body-dest {
+  background-image: url("./assets/destination/background-destination-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.h4-dest {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 2px;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-weight: lighter;
+}
+.dest-01 {
+  opacity: 0.5;
+}
+.cont-dest {
+  text-align: center;
+  margin-top: 80px;
+}
+.row {
+  margin: 0;
+  margin-top: 8%;
+}
+.a-dest {
+  font-family: "Share Tech", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: white;
+  padding-right: 30px;
+}
+
+.space-dest {
+  font-family: "Battambang", system-ui;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 80px;
+  font-weight: lighter;
+}
+.paragraph-dest {
+  font-family: "Barlow Condensed", sans-serif;
+  text-align: left;
+}
+
+hr {
+  color: white;
+}
+
+.body-dest span {
+  font-family: "Battambang", system-ui;
+  font-weight: lighter;
+}
+
+.distance-moon,
+.time-moon {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 950px) {
+  .body-dest {
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+  }
+  .cont-dest {
+    margin-top: 0;
   }
 }
