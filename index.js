@@ -39,4 +39,46 @@ $(document).ready(function () {
     $(".time-moon").text("7 years");
     $(".img-dest").attr("src", "./assets/destination/image-titan.png");
   });
+
+  //Crew Page
+
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  let autoSlideInterval;
+
+
+  function updateSlides() {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle("active", index === currentSlide);
+      slide.style.left =
+        index < currentSlide ? "-100%" : index > currentSlide ? "100%" : "0";
+    });
+  }
+
+
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateSlides();
+    resetAutoSlide();
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlides();
+    resetAutoSlide();
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 10000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  updateSlides();
+  startAutoSlide();
 });
