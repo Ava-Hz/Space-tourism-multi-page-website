@@ -47,7 +47,6 @@ $(document).ready(function () {
   const totalSlides = slides.length;
   let autoSlideInterval;
 
-
   function updateSlides() {
     slides.forEach((slide, index) => {
       slide.classList.toggle("active", index === currentSlide);
@@ -55,8 +54,6 @@ $(document).ready(function () {
         index < currentSlide ? "-100%" : index > currentSlide ? "100%" : "0";
     });
   }
-
-
 
   function goToSlide(index) {
     currentSlide = index;
@@ -81,4 +78,46 @@ $(document).ready(function () {
 
   updateSlides();
   startAutoSlide();
+
+  // Technology Page
+  $(".active").click(function () {
+    $(".active").css({ background: "#fff", color: "black" });
+    $(".second").css({ background: "none", color: "#fff" });
+    $(".third").css({ background: "none", color: "#fff" });
+    $(".h3-tech").text("SPACE CAPCULE");
+    $(".p-tech").text(
+      " A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+    );
+    $(".img-tech").attr(
+      "src",
+      "./assets/technology/image-space-capsule-landscape.jpg"
+    );
+  });
+  $(".second").click(function () {
+    $(".active").css({ background: "none", color: "#fff" });
+    $(".second").css({ background: "#fff", color: "black" });
+    $(".third").css({ background: "none", color: "#fff" });
+    $(".h3-tech").text("SPACEPORT");
+    $(".p-tech").text(
+      "   A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+    );
+    $(".img-tech").attr(
+      "src",
+      "./assets/technology/image-spaceport-landscape.jpg"
+    );
+  });
+
+  $(".third").click(function () {
+    $(".active").css({ background: "none", color: "#fff" });
+    $(".second").css({ background: "none", color: "#fff" });
+    $(".third").css({ background: "#fff", color: "black" });
+    $(".h3-tech").text("LAUNCH VEHICLE");
+    $(".p-tech").text(
+      " A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+    );
+    $(".img-tech").attr(
+      "src",
+      "./assets/technology/image-launch-vehicle-landscape.jpg"
+    );
+  });
 });
